@@ -1,0 +1,160 @@
+
+=================== HTML+CSS ==================
+The <template> tag is used as a container to hold some HTML content hidden from the user when the page loads.
+
+The content inside <template> can be rendered later with a JavaScript.
+
+-------
+a <!DOCTYPE> declaration It is an "information" to the browser about what document type to expect.
+
+
+-------
+
+The HTML DOM is an Object Model for HTML. It defines:
+
+HTML elements as objects
+Properties for all HTML elements
+Methods for all HTML elements
+Events for all HTML elements
+
+
+-------------
+
+data-* attributes allow us to store extra information on standard, semantic HTML elements
+<article
+  id="electric-cars"
+  data-columns="3"
+  data-index-number="12314"
+  data-parent="cars">
+...
+</article>
+const article = document.querySelector('#electric-cars');
+// The following would also work:
+// const article = document.getElementById("electric-cars")
+
+article.dataset.columns // "3"
+
+article::before {
+  content: attr(data-parent);
+}
+
+article[data-columns='3'] {
+  width: 400px;
+}
+
+
+
+-----------
+CSS selectors are used to "find" (or select) the HTML elements you want to style.
+
+@Simple selectors (select elements based on name, id, class)
+@Combinator selectors (select elements based on a specific relationship between them) ->
+
+          descendant selector (space)
+          child selector (>) -The child selector selects all elements that are the children of a specified element.
+
+          adjacent sibling selector (+)
+          div + p {
+            background-color: yellow;
+          }
+          The following example selects the first <p> element that are placed immediately after <div> elements:
+
+          General Sibling Selector (~)
+          div ~ p {
+              background-color: yellow;
+          }
+          The following example selects all <p> elements that are next siblings of <div> elements: 
+
+
+
+
+
+
+@Pseudo-class selectors (select elements based on a certain state) (:hover :first-child, :visited :active)
+@Pseudo-elements selectors (select and style a part of an element) (::first-line ::first-letter ::before ::after)
+@Attribute selectors (select elements based on an attribute or attribute value)/* Internal links, beginning with "#" */
+a[href^="#"] {
+  background-color: gold;
+}
+
+/* Links with "example" anywhere in the URL */
+a[href*="example"] {
+  background-color: silver;
+}
+
+-------------
+
+To center our box we use the align-items property to align our item on the cross axis, which in this case is the block axis running vertically. 
+We use justify-content to align the item on the main axis, which in this case the inline axis running horizontally.
+-----------------
+Q. visibility:hidden and display:none
+
+display:none means that the tag in question will not appear on the page at all 
+(although you can still interact with it through the dom). There will be no space allocated for it between the other tags.
+
+visibility:hidden means that unlike display:none, the tag is not visible, 
+but space is allocated for it on the page. The tag is rendered, it just isn't seen on the page.
+--------------------
+ 
+Q. Zindex
+
+The z-index property specifies the stack order of an element.
+An element with greater stack order is always in front of an element with a lower stack order.
+----------------------
+
+Q. position - relative vs absolute
+
+The position CSS property sets how an element is positioned in a document
+
+relative
+The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left.
+
+absolute
+The element is removed from the normal document flow, and no space is created for the element in the page layout.
+-------------------------
+
+
+Flex
+
+---------------
+html5 features
+
+https://www.browserstack.com/guide/top-html5-features
+-----------------
+
+
+
+SCSS Advantages:
+CSS Preprocessor
+Loops
+Imports
+Color Functions - saturate,darken,opacify
+If/Else Statements
+Extends
+Nesting
+Variables
+
+----------------
+
+
+px, rem, em
+
+Use px for small, fixed-size elements like borders or shadows.
+Use em for typography and other scalable elements that need to change size relative to their parent element.
+Use rem for scalable typography and responsive layouts that need to change size relative to the root element.
+
+
+----
+ Html semantics.
+
+
+
+----------
+
+If there are two or more CSS rules that point to the same element, 
+the selector with the highest specificity value will "win", and its style declaration will be applied to that HTML element.
+
+Inline styles - Example: <h1 style="color: pink;">
+IDs - Example: #navbar
+Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+Elements and pseudo-elements - Example: h1, ::before

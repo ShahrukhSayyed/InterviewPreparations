@@ -1,0 +1,115 @@
+HTML:
+• What is the purpose of the doctype declaration?
+• Explain the difference between <div> and <span>.
+• How does event delegation work in the DOM?
+• Explain the purpose of the data- attributes.
+
+CSS:
+• What is the box model in CSS?
+-----
+• Describe the difference between margin and padding.
+The main difference between padding and margin is that padding is the space between the element's 
+content and its border, while margin is the space between the element's border and the next element.
+-----
+• What is the importance of media queries in responsive design?
+window 6000 or smaller
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+
+
+-----
+• Describe the difference between em and rem units in CSS.
+In CSS, the rem unit is only relative to the document's root element, 
+while the em unit is only relative to the immediate parent of the targeted element
+-----
+• What is the flexbox model, and how does it work?
+----
+• Explain the purpose of justify-content and align-items in flexbox.
+In flexbox, justify-content works across the main axis while align-items works on the cross-axis.
+----
+• How does CSS Grid differ from Flexbox?
+Grid and flexbox. The basic difference between CSS grid layout and CSS flexbox layout is that flexbox was designed for layout in one dimension - 
+either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time.
+-------
+• Explain the use of the grid-template-columns property.
+The grid-template-columns property specifies the number (and the widths) of columns in a grid layout
+-------
+JavaScript Basics:
+• Explain the concept of hoisting in JavaScript.
+• What is the difference between let, const, and var?
+• What is a closure in JavaScript?
+• Explain the differences between arrow functions and regular functions.
+
+AJAX:
+• What is AJAX, and how does it work?
+Ajax is a set of web development techniques that uses various web technologies on the client-side to 
+create asynchronous web applications. 
+With Ajax, web applications can send and retrieve data from a server asynchronously without 
+interfering with the display and behaviour of the existing page.
+-------
+• Explain the role of the XMLHttpRequest object.
+
+RESTful API Concepts:
+• What is REST, and how does it differ from SOAP?
+SOAP and REST are two different approaches to API design. The SOAP approach is highly structured and uses XML data format. REST is more flexible and allows applications to exchange data in multiple formats.
+
+-------
+• Describe the common HTTP methods used in RESTful APIs.
+
+React Basics:
+• What is JSX in React?
+• Explain the purpose of state in React components.
+
+React Components:
+• Differentiate between functional and class components in React.
+• Describe the lifecycle methods in a React class component.
+
+React Hooks:
+• Explain the use of the useState hook in React.
+• What is the useEffect hook, and why is it used?
+
+Redux:
+• What problem does Redux solve in a React application?
+• Explain the roles of actions, reducers, and the store in Redux.
+
+Web Performance Optimization:
+• How can you optimize website performance?
+• Explain lazy loading and its benefits.
+
+Cross-Origin Resource Sharing (CORS):
+• What is CORS, and how does it work?
+• Describe how to handle CORS issues in a web application.
+
+Web Security:
+• What is Cross-Site Scripting (XSS), and how can it be prevented?
+• Explain Cross-Site Request Forgery (CSRF) and its prevention methods.
+
+Version Control (Git):
+• Describe the purpose of Git and how it differs from other version control systems.
+• Explain the Git branching strategy and the use of merge vs. rebase.
+
+Build Tools (e.g., Webpack):
+• What is Webpack, and how does it improve the frontend development workflow?
+• Explain the concept of code splitting in Webpack.
+
+Testing in Frontend Development:
+• What are the benefits of unit testing in a frontend application?
+• Describe the differences between unit testing and integration testing.

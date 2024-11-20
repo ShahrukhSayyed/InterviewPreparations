@@ -1,0 +1,39 @@
+area attributes
+
+settimeout , promises , output
+how to improve filter on large arrays
+
+return type of fetch
+
+print level of div elements
+<div> 
+<div> </di>
+<div> </di>
+<div> 
+  <div> </di>
+  <div> </di>
+</di>
+
+</di>
+Design Patterns, find which design pattern is used
+SOLID Principle
+
+---------
+Typescript
+types to variable , 
+return type of function, 
+return type of fetch method
+-------
+HTML
+Accessibility
+-------
+angular
+
+write a code to implement modal with dynamic content
+
+----
+
+web application :
+difference websocket and polling
+OWASP top 10
+CSRX Attack

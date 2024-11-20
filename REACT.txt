@@ -1,0 +1,4 @@
+UseState - to store the data
+UseEffect - it will get called after the page renders
+
+Shimmer UI

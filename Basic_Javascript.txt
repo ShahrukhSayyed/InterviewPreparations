@@ -1,0 +1,474 @@
+Introduce yourself
+Projects
+work on Basic understanding of Angular 
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Thank you for giving me this opportunity to talk about myself
+I am Shahrukh Sayyed, dedicated and energetic individual ,working as Web Ui Developer in Globant.
+I am having 7+ years of experience in the IT Industry.
+I think I am versatile individual who is capable to deliver projects like Headcount , ThirdParty Spend , Selection Toool,CGM, 
+Admin Portal while supervising the team of more than 4 people.
+Currently I am Working on Third Party Spend which is used in the spend of third parties in Hardware/Software/IT.
+
+I have recieved appreciations from Stake holders and client here for delivering Projects within a timeline.
+I am highly enthused about my work and goals . by which I was able to recieved Manager choice awards for 4 times in a row for demonstrating different practices 
+in IBM India Pvt Ltd.
+I also recieved appreciation from General Manager of Asia continent for delivering extraordinary work towards the Japan Client.
+Thats all about myself.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+tell me about your current project 
+Its a Tool used in the selection process of an employees who are moving from organization.It is developed with the help of Angular 9, Java, mySql tech stack 
+----------------------------------------------------------------------------------------------------------------------------------------
+Roles of yourself
+There are different teams in the project like Backend, Frontend , and Database teams
+I am part of frontend team who is designing and developing the Face of the application.
+My responsibilities includes Requirment gathering from Management , 
+Planning the activities with the Technical manager,
+Design and development of the Frontend,
+creating mockups and protypes and get approved from technical head,
+helping team memebers to design the database schema., 
+helping team members to understand the system requirements of the project/features to develop.
+
+
+----------------
+Why should we hire you
+“Honestly, I possess all the skills and experience that you’re looking for. I’m pretty confident that I am the best candidate for this job role.
+On the other hand, I am a self motivated person and I try to exceed my superior’s expectations with high-quality work.
+Being a fast learner, I quickly pick up business knowledge related to my project.
+Lastly, I would like to add that I work well both as an individual contributor and also as a team member.
+
+--------------
+Why this organization?
+WHile going through the website of Globant I found that being a 
+digital business transformation partner Globant is helping different 
+software organizations 
+to imrove their digital platforms to generate more revenues.
+
+=================== ===================  ===================  ===================  Javascript =================== =================== ==========================
+features of es6
+Default Parameters in ES6 -
+var calculateArea = function(height = 50, width = 80) {  
+    // write logic
+    ...
+}
+
+
+Template Literals/Multi-line Strings - back-ticked string.
+
+Destructuring Assignment  - unpack values from arrays, or properties from objects, into distinct variable.
+
+Arrow Functions - this will have the same value as in the context of the function— it won’t mutate.
+
+Promises - A promise is an object which can be returned synchronously from an asynchronous function. 
+
+Block-Scoped Constructs Let and Const - var declarations are globally scoped or function scoped while let and const are block scoped.
+var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
+They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.
+While var and let can be declared without being initialized, const must be initialized during declaration.
+
+Classes - syntatic sugar for functions
+
+Modules - there are modules with import and export operands.
+rest => Aggregation of remaining arguments into single parameter of variadic functions.(function definition) multiple arguments into single param(...args)
+function sum(...args){} sum(1,2,3);
+
+spread => Spreading of elements of an iterable collection (like an array or even a string) into both literal elements and individual function parameters.(function call)
+function sum(num1,num2,num3){} sum(...array)
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+arrow function,benefits of it
+
+Arrow functions:
+
+Do not have this
+Can’t be called with new
+They also don’t have super
+That’s because they are meant for short pieces of code that do not have their own “context”, but rather work in the current one.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+A promise is an object which can be returned synchronously from an asynchronous function. 
+Fulfilled: onFulfilled() will be called (e.g., resolve() was called)
+Rejected: onRejected() will be called (e.g., reject() was called)
+Pending: not yet fulfilled or rejected
+
+Promises 6 static methods
+Promise.all ->  promises to execute in parallel and wait until all of them are ready
+Promise.all([
+  new Promise(resolve => setTimeout(() => resolve(1), 3000)), // 1
+  new Promise(resolve => setTimeout(() => resolve(2), 2000)), // 2
+  new Promise(resolve => setTimeout(() => resolve(3), 1000))  // 3
+]).then(alert); // 1,2,3 when promises are ready: each promise contributes an array member
+If any of the promises is rejected, the promise returned by Promise.all immediately rejects with that error.
+
+
+Promise.allSettled
+Promise.allSettled just waits for all promises to settle, regardless of the result. The resulting array has:
+
+{status:"fulfilled", value:result} for successful responses,
+{status:"rejected", reason:error} for errors.
+
+Promise.race
+Similar to Promise.all, but waits only for the first settled promise and gets its result (or error).
+
+Promise.any
+Similar to Promise.race, but waits only for the first fulfilled promise and gets its result. If all of the given promises are rejected, 
+then the returned promise is rejected with AggregateError – a special error object that stores all promise errors in its errors property.
+
+Promise.resolve
+Promise.resolve(value) creates a resolved promise with the result value.
+	
+----------------------------------------------------------------------------------------------------------------------------------------
+callback
+“callback-based” style of asynchronous programming. A function that does something asynchronously 
+should provide a callback argument where we put the function to run after it’s complete.
+
+As calls become more nested, the code becomes deeper and increasingly more difficult to manage, especially if we have real code 
+instead of ... that may include more loops, conditional statements and so on.
+
+That’s sometimes called “callback hell” or “pyramid of doom.”
+to avoid such pyramids. One of the best ways is to use “promises,”
+----------------------------------------------------------------------------------------------------------------------------------------
+Prototyping in 
+Prototypal Inheritance: A prototype is a working object instance. Objects inherit directly from other objects.
+__proto__ , prototype
+----------------------------------------------------------------------------------------------------------------------------------------
+OOPS concepts
+----------------------------------------------------------------------------------------------------------------------------------------
+ecma script
+----------------------------------------------------------------------------------------------------------------------------------------
+closure =>
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment)
+a closure gives you access to an outer function’s scope from an inner function. In JavaScript, 
+closures are created every time a function is created, at function creation time.
+closures are commonly used to give objects data privacy
+
+
+Lexical environment is the local memory along with lexical environment of parent of its parent.
+Lexical means hirarchy, sequence
+----------------------------------------------------------------------------------------------------------------------------------------
+hoisting => 
+hoisting is the phoenomena of JS where variable and function declarations got memory in memory initilizing phase i.e before execution phase.
+var hoisted to nearest function scope and let/const hoisted at block scope but they don't get initialized with undefined value.
+If we try to access let/const before initialization we will get reference error saying its not declared yet.  
+----------------------------------------------------------------------------------------------------------------------------------------
+object,shallow vs deep copy
+object.create  - copy the object by given object's prototype 
+object.assign and spread operator are the ways to copy the object but nested elements will be copied by reference only
+JSON.stringyfyn(JSON.parse()) -> deep copy but complex structures like map,set and functions are not get copied(we can say its a deep copy)
+deep copy can be by loadash.deepClone method
+----------------------------------------------------------------------------------------------------------------------------------------
+
+JavaScript has first class functions, which allows us to treat functions as data — assign them to variables, 
+pass them to other functions, return them from functions, etc…
+
+A higher order function is any function which takes a function as an argument, returns a function, or both. 
+Higher order functions are often used to:
+Abstract or isolate actions, effects, or async flow control using callback functions, promises, monads, etc…
+Create utilities which can act on a wide variety of data types
+Partially apply a function to its arguments or create a curried function for the purpose of reuse or function composition
+Take a list of functions and return some composition of those input functions
+=============== Node ========================
+eventloop
+
+
+===========
+
+
+palindrome if reverse is equal to original
+
+const reverseString = string.split('').reverse().join('');
+
+
+
+===============
+
+
+array min,max
+var min = Math.min( ...arr ),
+    max = Math.max( ...arr );
+
+
+
+var min = Math.min.apply(null, arr),
+    max = Math.max.apply(null, arr);
+
+
+==============
+
+
+
+prime
+
+for (let i = 2; i < number; i++) {
+        if (number % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+
+=========
+
+OOPS concepts
+abstraction,encapsulation
+----------------------------------------------------------------------------------------------------------------------------------------
+overloading,overriding
+
+JavaScript does not allow method overloading. In JavaScript the most recent definition of method is called.
+----------------------------------------------------------------------------------------------------------------------------------------
+
+static constructor vs normal cons which will call first
+The main difference between a static constructor and a normal constructor is when they are called and what they initialize:
+When called
+A static constructor is called once, before the first instance is created or any static members are referenced. A normal constructor is called every time a new object is created.
+What initialized
+A static constructor initializes static members, while a normal constructor initializes instance members. 
+Here are some other differences between static and normal constructors:
+Access modifiers: Static constructors do not have access modifiers or parameters. 
+Use: A static constructor is used to initialize static data or perform an action that only needs to be done once. A normal constructor is used to initialize a class.
+----------------------------------------------------------------------------------------------------------------------------------------
+two interfaces with different implementations having same name which one will be called first
+----------------------------------------------------------------------------------------------------------------------------------------
+
+indexOf is for plain substrings, search is for regular expressions.
+----------------------------------------------------------------------------------------------------------------------------------------
+Microtask
+Asynchronous tasks need proper management. For that, the ECMA standard specifies an internal queue PromiseJobs, 
+more often referred to as the “microtask queue” (V8 term).
+
+As stated in the specification:
+
+The queue is first-in-first-out: tasks enqueued first are run first.
+Execution of a task is initiated only when nothing else is running.
+
+unhandledrejection is generated when the microtask queue is complete: 
+the engine examines promises and, if any of them is in the “rejected” state, then the event triggers.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Async/Await
+There’s a special syntax to work with promises in a more comfortable fashion, called “async/await”.
+The word “async” before a function means one simple thing: a function always returns a promise. Other values are wrapped in a resolved promise automatically.
+await literally suspends the function execution until the promise settles, 
+and then resumes it with the promise result. That doesn’t cost any CPU resources, 
+because the JavaScript engine can do other jobs in the meantime: execute other scripts, handle events, etc.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261#.aa7ubggsy
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Destructuring
+The destructuring assignment syntax is a JavaScript expression that makes it possible 
+to unpack values from arrays, or properties from objects, into distinct variables.
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+const { a, b } = obj;
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
+
+
+currying is the technique of converting a function that takes multiple arguments into a sequence of functions that each takes a single argument.
+
+---------------
+
+In the debouncing technique, no matter how many times the user fires the event, 
+the attached function will be executed only after the specified time once the user stops firing the event.
+
+Throttling is a technique in which, no matter how many times the user fires the event, the attached function will be executed only once in a given time interval.
+
+
+
+-----
+
+/* let input = 'nig#t' // tgi#n
+let output = ''
+
+function isAlphabet(char){
+  return ((char >= 'A' && char <= 'Z') || (char >= 'a' && char <= 'z'));
+}
+
+
+const reverseString = input.split("").filter(elem => isAlphabet(elem)).reverse();
+
+console.log(reverseString)
+let temp = input.split("");
+let revIndex=0;
+
+for(let index=0;index < temp.length;index++){
+    if(isAlphabet(temp[index])){
+      temp[index] = reverseString[revIndex];
+      revIndex++;
+    }
+}
+console.log(temp.join(''))
+ */
+function callMe(a,...other){
+	cosnole.log(...other)
+}
+callMe(a,b,c)
+
+
+===============
+
+remove duplicates from array
+
+
+const array = [1,2,3,1,2,3,5,6,7];
+
+
+const output = array.filter((element,index) => array.indexOf(element) === index);
+
+console.log(output);
+
+
+-----------------
+https://medium.com/jspoint/how-the-browser-renders-a-web-page-dom-cssom-and-rendering-df10531c9969
+Critical Rendering Path - How browser-renders-a-web-page
+
+When a web page is loaded, the browser first reads the HTML text and constructs DOM Tree from it. 
+Then it processes the CSS whether that is inline, embedded, or external CSS and constructs the CSSOM Tree from it.
+After these trees are constructed, then it constructs the Render-Tree from it. 
+Once the Render-Tree is constructed, then the browser starts the printing individual elements on the screen.
+
+Layout operation - >The first browser creates the layout of each individual Render-Tree node. 
+The layout consists of the size of each node in pixels and where (position) it will be printed on the screen. 
+This process is called layout since the browser is calculating the layout information of each node.
+
+In Paint Operation Layers are created
+In compositing operations, these layers are sent to GPU to finally draw it on the screen.
+
+DOM Tree -> CSSOM Tree -> Render Tree -> Layout -> Paint -> Compositing
+
+
+------------------
+Document Flow
+
+Document flow is the arrangement of page elements, as defined by CSS positioning statements, 
+and the order of HTML elements. This is to say, how each element takes up space and how other elements 
+position themselves accordingly.
+There are three main ways elements are positioned:
+
+Display types -  Block,inline
+Floats
+Positioning 
+------------------
+http://latentflip.com/loupe -> Real time visulization of code
+
+
+-----------------
+Mutable is a type of variable that can be changed. In JavaScript, only objects and arrays are mutable, not primitive values.
+Strings and Numbers are Immutable. Lets understand this with an example:
+
+var immutableString = "Hello";
+// In the above code, a new object with string value is created.
+immutableString = immutableString + "World";
+// We are now appending "World" to the existing value.
+
+
+On appending the "immutableString" with a string value, following events occur:
+Existing value of "immutableString" is retrieved
+"World" is appended to the existing value of "immutableString"
+The resultant value is then allocated to a new block of memory
+"immutableString" object now points to the newly created memory space
+Previously created memory space is now available for garbage collection.
+-----------------------------
+
+Memoization in JavaScript
+
+Memoization is a powerful optimization technique used in computer programming to speed up the 
+execution of functions by caching their results. It is particularly useful when dealing with computationally expensive or frequently called functions. 
+
+------------------------
+flatten the array without any build in function
+
+
+function flatten(array) {
+    const result = [];
+
+    for(let i = 0; i < array.length; i++) {
+
+        if(Array.isArray(array[i])) {
+            result = result.concat(flatten(array[i]));
+        } else {
+            result.push(ary[i]);
+        }
+    }
+    return result;
+}
+
+--------------
+Arrays(Write a function to Return the second largest number)
+Find the k-th maximum element in an array.
+-------------
+
+
+
+Design Patterns 
+Design patterns are nothing but the ideas that can be useful in certain situations to solve a particular kind of problem.
+Singleton Pattern
+Prototype pattern
+DI Patterns
+Decorators Pattern
+Observer Pattern
+
+---------------
+Call is a function that helps you change the context of the invoking function.
+Apply is very similar to the call function. The only difference is that in apply you can pass an array as an argument list.
+Bind is a function that helps you create another function that you can execute later with the new context of this that is provided.
+
+let obj1 = {
+    name:"Shahrukh",
+    address:"Jalna"
+}
+let obj2 = {
+    name:"Rohan",
+    address:"Jalna"
+}
+function displayName(state,country){
+    console.log(`Name ${this.name} , ${this.address} , ${state} , ${country}`);
+}
+
+let display = displayName.bind(obj1);
+display();
+
+Function.prototype.myBind = function(obj,...args) {
+    let func = this;
+    return function(...args2){
+        func.apply(obj, [...args, ...args2]);
+    }
+}
+
+let display2 = displayName.myBind(obj1,"Maharashtra");
+display2("India");
+
+----------------------
+
+
+The Object.assign() static method copies all enumerable own properties 
+from one or more source objects to a target object. It returns the modified target object.
+
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+-------------------
+
+
+for..in iterates over all enumerable property keys of an object
+for..of iterates over the values of an iterable object. Examples of iterable objects are arrays, strings, and NodeLists.
+
+------------------
+static:
+
+static fields are useful when you want a field to exist only once per class, not on every class instance you create. 
+This is useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
+
+------
+
+
+object.freeze 

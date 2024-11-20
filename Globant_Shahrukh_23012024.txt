@@ -1,0 +1,195 @@
+// Shahrukh Sayyed 7+ Years Angular
+
+HTML - 7/10
+CSS - 7/10
+JS - 7.5/10
+Angular - 8/10
+
+// --------------------------------
+
+== vs === 
+  
+let x = 20;
+let y = 10
+
+1 == '1' // Will that check type?
+
+faster? // ===
+  
+Data types in JS? // Number, String, Object, Array
+  
+Primitive vs Non Primitives // 
+
+Pass by reference vs value // 
+
+// ---------------
+
+var a = {
+	name: 'Anup'
+};
+
+var b = 2;
+
+var c = [];
+
+function change(tempA, tempB, tempC) {
+	tempA.name = 'Nikhil';
+	tempB = 3;
+	tempC.push('value');
+}
+
+change(a, b, c);
+
+console.log(a.name, b, c); // ? Nikhil, 2, ['value']
+
+// ------------------------------
+
+var userName = "Sooraj";
+
+a();
+
+function a() {
+	b();
+	console.log("a");
+}
+
+function b() {
+	console.log('b: ', userName); // ? 
+}
+
+console.log("done");
+
+// b: Sooraj
+// a
+// done
+
+// Execution context
+// Callstack
+// Compile vs Interpretor
+
+// -----------------------------
+
+var userName = "Sooraj";
+
+b();
+
+function b() {
+  console.log('b: ', userName); // ? b: undefined
+  
+  var userName = "Shahrukh";
+  
+  console.log('b: ', userName); // ? b: Shahrukh
+
+}
+
+console.log('Out: ', userName); // Out: Sooraj
+
+// Hoisting
+
+// -------------------------------
+
+var userName = "Sooraj";
+
+b();
+
+function b() {
+  setTimeout(() => {
+    console.log("timeout: ", userName);
+  }, 0);
+
+  new Promise((resolve, reject) => 
+      resolve("resolve: ")
+  ).then(resolve => console.log(resolve, userName));
+  
+  console.log('b: ', userName); // ? b: undefined
+  
+  var userName = "Shahrukh";
+  
+}
+
+// b: undefined
+// resolve: Shahrukh
+// timeout: Shahrukh
+
+// Closure
+
+// -----------------------------
+
+var userName = "Sooraj";
+
+var person = {
+	userName: "Nikhil",
+	age: 30,
+	getDetail: function () {
+		console.log(this.userName);
+	},
+	getName: () => {
+		console.log(this.userName);
+	}
+}
+
+person.getDetail(); // ? Nikhil
+person.getName(); // ? Sooraj
+var animal = {
+  userName: "Lion"
+}
+
+let getAnimalDetail = person.getDetail.bind(animal);
+getAnimalDetail();
+
+person.getDetail // Lion
+
+// ----------------------------
+
+HTML tags 5
+SEO
+Web UI accessibility
+Bubble vs Capture phase
+PreventDefault vs StopPropogation
+
+// -------------------------
+
+CSS box model
+element -> padding -> border -> margin
+
+Specificity
+inner style 
+id,class
+psuedo elements
+psuedo classes
+
+em vs rem
+
+inline vs block element
+
+// ----------------------------
+
+What is Angular and How it works?
+What is AOT compilation?
+What are directives in Angular?
+Difference between component and directive?
+How does one share data between components in Angular? 
+Difference between observables and promises?
+RxJS Operator - Map, Pipe, Debounce Time
+Differnence between subject and behaviourSubject
+Angular Gaurds - Canactivate, CanDeactive, CanResolve
+Authentication vs Autherization
+Lazy Loading
+Interceptors 
+
+Performance Optimization - Lazy load, unsubscribe, tree shaking, ivy compiler, 
+  
+How to mock click in Jasmine
+
+git merge vs git rebase 
+
+
+
+
+
+
+
+
+
+
+

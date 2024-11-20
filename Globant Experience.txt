@@ -1,0 +1,218 @@
+--------------
+primitive number, undefined, string - unmutable
+non primitive Object Array - mutable
+
+var addres = undefined;
+
+let address =
+
+
+var name = 'ABC' 1001
+
+var name = "PQR" 1002
+
+var obj = {name:'ABC'} 2001
+obj.name = "XYZ"
+
+//---------------------
+let const 
+
+const nm = "Abc";
+
+{
+const nm = "PQR";
+}
+---------------------------
+
+for (var i=0; i<10; i++) {
+
+}
+---------------------------
+Event handling 
+Event bubbling? 
+1 -> 2 -> 3
+
+3 -> 2 -> 1
+event.stopPropagation()
+--------------------------
+console.log(display());
+const display = () => {
+console.log("hi");
+}
+
+hello();
+function hello(){
+	console.log("Hello")
+}
+
+
+
+var person = {
+	name : "ABC"
+	printName : function() =>{
+  	console.log(this.abc)
+  }
+}
+
+var person2 = {
+	name: "PQR"
+}
+person.printName();
+
+
+const display = person.printname().bind(person2,arg1);
+display();
+
+
+class Animal {
+	var name ;
+	displayName(){
+  	console.log(name)
+  }
+}
+
+
+function Animal {
+	var name;
+  displayName(){
+  
+  }
+}
+
+Animal.__proto__.__proto_
+
+JSON.strigyfy and JSON.parse
+
+const array = [1,2,3,4]
+
+const output = array.map((elem) => {
+	elem * 2;
+})
+
+const output = array.reduce((acc,current) => {
+	return acc += curent
+},{})
+
+function display() => {
+
+}
+
+
+const array = [1,{},];
+
+index = int or string
+arr[0]
+arr['name']
+
+
+let obj1 = {name:'PQR'};
+
+arr[obj1] = 111;
+//arr['obj1'] = obj1;
+
+
+let obj2 = {name:'ABC'};
+
+arr[obj2] = 222;
+
+console.log(arr[obj1]);
+
+keys of arr 
+
+{name:'PQR'}
+{name:'ABC'}
+
+["[object object]":111]
+
+
+
+
+
+
+let student = {
+	name
+  age
+	n-iter  
+}
+
+{ name : name , age:age , ...other} = student
+
+function sum(...numbers){
+	
+
+}
+
+
+sum(1,2,3)
+
+---------------------
+for (var i = 0; i < 5; i++) {
+  setTimeout(() => console.log(i), 1);
+}
+5
+5
+5
+5
+5
+
+---------------------
+for (let i = 0; i < 5; i++) {
+  setTimeout(() => console.log(i), 1);
+}
+0
+1
+2
+3
+4
+-----------------------------------
+
+Second Round 
+Create ToDOList in Angular
+https://stackblitz.com/edit/angular-ivy-v9jevq?file=src%2Fapp%2Fapp.component.ts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

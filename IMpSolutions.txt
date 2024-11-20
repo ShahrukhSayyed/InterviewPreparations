@@ -1,0 +1,53 @@
+Analytical Skills:
+- Requirements Understanding
+- Problem Solving &amp; Debugging
+- Algorithms &amp; Programming skills
+
+
+Design Skills:
+- OOPS Concepts
+- Design Patterns
+- Scalability, Maintainability &amp;
+Performance
+
+
+JavaScript:
+- OOPS Concepts (Classes, Inheritance,
+Access modifiers)
+- Type Script
+
+
+HTML5, CSS:
+- Local storage/ session storage
+- Canvas, SVG
+- Drag drop
+- Responsive design – Bootstrap, media
+query
+- CSS frameworks – LESS, SASS (SCSS)
+
+
+
+Angular JS or 2.0 OR 4.0 OR above:
+- Architecture
+- Directives/Component
+- Component Interaction
+- State Management
+- Promises/Observables
+- Modules
+- Data Binding
+- Templates
+- Routes
+- Form Handling
+=======================
+
+
+-Sort array without .sort() 
+-Hoisting 
+-Scope chaining and prototype 
+-Closure 
+-Currying Ques for the sum 
+-Cookies 
+-Local and session storage 
+-Lifecycle hooks angular 
+-Dependency injection 
+-difference between constructor and ngOnChanges

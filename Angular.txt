@@ -1,0 +1,418 @@
+
+============= Angular =========================
+why typescript
+TypeScript is a superset of JavaScript which primarily provides optional static typing, classes and interfaces. 
+One of the big benefits is to enable IDEs to provide a richer environment for spotting common errors as you type the code.
+The TypeScript compiler uses interface for type-checking (also known as "duck typing" or "structural subtyping") whether the object has a specific structure or not.
+
+The interface contains only the declaration of the methods and fields, but not the implementation. 
+We cannot use it to build anything. It is inherited by a class, and the class which implements interface defines all members of the interface.
+
+When the Typescript compiler compiles it into JavaScript, then the interface will be disappeared 
+from the JavaScript file. Thus, its purpose is to help in the development stage only.
+-----------------
+
+Routing,Router,lazy loading
+
+-----------
+Webpack what it does?
+---webpack is an open-source JavaScript module bundler. 
+It is made primarily for JavaScript, but it can transform front-end assets such as 
+HTML, CSS, and images if the corresponding loaders are included. webpack takes 
+modules with dependencies and generates static assets representing those modules.
+-----------
+Server side rendering
+-----------
+Lazy loading
+-----------
+dev dependencies vs dependencies
+-----------
+Service Usage
+-----------
+environment.ts
+-----------
+services
+-----------
+redux
+-----------
+service worker
+-----------
+ng serve,ng build
+-----------
+auth guard
+
+Different types of guards,
+
+CanActivate guard (e.g. it checks route access).
+CanActivateChild guard (checks child route access).
+CanDeactivate guard (prompt for unsaved changes).
+Resolve guard (pre-fetching route data).
+CanLoad guard (check before loading feature module assets).
+
+---
+Dependency injection in Angular:
+Dependency injection (DI), is an important application design pattern.
+Dependencies are services or objects that a class needs to perform its function.
+
+How Angular Works/executes ? - if we create components how will it executes that component , 
+mention index.html and app component ts,html,css,router-outlet ( tell the whole process) 
+ 
+Routing in angular application - how routing works( routerModule , forRoot , forchild methods, lazy routing )
+how to read json file in Angular - mention about httpClient module , observables, promises
+webpack
+
+
+----
+ViewEncapsulation
+The styles of components with ViewEncapsulation.None are added to the <head> of the document, 
+making them available throughout the application, and are not "scoped" so they can affect any element in the application.
+None means that Angular does no view encapsulation. Angular adds the CSS to the global styles. The scoping rules, 
+isolations, and protections discussed earlier don't apply. 
+This mode is essentially the same as pasting the component's styles into the HTML.
+
+ The styles of components with ViewEncapsulation.Emulated are added to the <head> of the document, 
+making them available throughout the application, but are "scoped" so they only affect elements within the component's template.
+Emulated view encapsulation (the default) emulates the behavior of shadow DOM by preprocessing (and renaming) 
+the CSS code to effectively scope the CSS to the component's view. 
+
+The styles of components with ViewEncapsulation.ShadowDom are only added to the shadow DOM host,
+ensuring that they only affect elements within the component's template.
+ShadowDom view encapsulation uses the browser's built-in shadow DOM implementation (see Shadow DOM) to attach a shadow DOM to the component's host element, 
+and then puts the component view inside that shadow DOM.The component's styles are included within the shadow DOM.
+
+-------------------
+Change Detection Strategy
+Change Detection means updating the DOM whenever data is changed. Angular provides two strategies for Change Detection.
+
+In its default strategy, whenever any data is mutated or changed, Angular will run the change detector to update the DOM. 
+In the onPush strategy, Angular will only run the change detector when a new reference is passed to @Input() data.
+ChangeDetectorRef -> class
+abstract class ChangeDetectorRef {
+  abstract markForCheck(): void
+  abstract detach(): void
+  abstract detectChanges(): void
+  abstract checkNoChanges(): void
+  abstract reattach(): void
+}
+
+----------------
+Interceptors allow us to intercept incoming or outgoing HTTP requests using the HttpClient.
+By intercepting the HTTP request, we can modify or change the value of the request.
+---------------
+Pipes - Pure and impure - pure bydefault which means if input is changed then transform method will be called
+Angular provides built-in pipes for typical data transformations, including transformations for internationalization (i18n), 
+which use locale information to format data. The following are commonly used built-in pipes for data formatting:
+
+DatePipe: Formats a date value according to locale rules.
+UpperCasePipe: Transforms text to all upper case.
+LowerCasePipe: Transforms text to all lower case.
+CurrencyPipe: Transforms a number to a currency string, formatted according to locale rules.
+DecimalPipe: Transforms a number into a string with a decimal point, formatted according to locale rules.
+PercentPipe: Transforms a number to a percentage string, formatted according to locale rules.
+
+import {Pipe, PipeTransform} from '@angular/core';
+@Pipe ({
+   name : 'sqrt'
+})
+export class SqrtPipe implements PipeTransform {
+   transform(val : number) : number {
+      return Math.sqrt(val);
+   }
+}
+
+In Angular, we can pass any number of parameters to the pipe using a colon (:) and when we do so, it is called Angular Parameterized Pipes. 
+<p>Full Date : {{today | date:'fullDate'}}</p>
+
+-------------------------------------
+Access DOM Elements in ts
+Angular has provided two ways to query/access various reference types within a Component/Directive. These are
+
+ViewChild/ViewChildren
+ContentChild/ContentChildren
+
+ContentChild/ContentChildren
+The usage is pretty much similar to that of ViewChild/ViewChildren. The only difference is that 
+it queries within the <ng-content> projected elements of the component while 
+the @ViewChild queries within the template of the component.
+
+DOM access via ElementRef
+Using ViewChild and Template Reference Variables
+
+-----------------------------------
+Directives-->
+Directives are classes that add additional behavior to elements in your Angular applications.
+The different types of Angular directives are as follows:
+
+Components—directives with a template. This type of directive is the most common directive type.
+Attribute directives—directives that change the appearance or behavior of an element, component, or another directive.(ngClass,ngStyle)
+Structural directives—directives that change the DOM layout by adding and removing DOM elements.(ngIf,ngFor,ngSwitch)
+constructor(
+    private templateRef: TemplateRef<any>,
+    private viewContainer: ViewContainerRef) { }
+
+  @Input() set appUnless(condition: boolean) {
+    if (!condition && !this.hasView) {
+      this.viewContainer.createEmbeddedView(this.templateRef);
+      this.hasView = true;
+    } else if (condition && this.hasView) {
+      this.viewContainer.clear();
+      this.hasView = false;
+    }
+  }
+-----------------------------------
+Decorators
+There are four main types:
+
+Class decorators, e.g. @Component and @NgModule
+Property decorators for properties inside classes, e.g. @Input and @Output
+Method decorators for methods inside classes, e.g. @HostListener
+Parameter decorators for parameters inside class constructors, e.g. @Inject
+
+-----------------------
+Reactive forms provide a model-driven approach to handling form inputs whose values change over time. 
+Reactive forms are built around observable streams, where form inputs and values are provided as streams of input values, which can be accessed synchronously.
+
+Forms typically contain several related controls. Reactive forms provide two ways of grouping multiple related controls into a single input form.
+A form group defines a form with a fixed set of controls that you can manage together. Form group basics are discussed in this section. 
+You can also nest form groups to create more complex forms.
+A form array defines a dynamic form, where you can add and remove controls at run time. You can also nest form arrays to create more complex forms.
+
+There are two ways to update the model value:
+
+Use the setValue() method to set a new value for an individual control. The setValue() 
+method strictly adheres to the structure of the form group and replaces the entire value for the control.
+
+Use the patchValue() method to replace any properties defined in the object that have changed in the form model.
+
+Creating form control instances manually can become repetitive when dealing with multiple forms. 
+The FormBuilder service provides convenient methods for generating controls.
+
+z------------------------
+Observables 
+Observables provide support for passing messages between parts of your application. 
+They are used frequently in Angular and are a technique for event handling, asynchronous programming, and handling multiple values.
+-----------------------
+Angular 12
+https://www.angularminds.com/blog/article/top-10-features-of-angular-12.html
+
+HttpStatusCode.Ok, HttpStatusCode.Error constants defined by default
+Production build by default -
+Typescript 4.2
+few packages have been moved
+
+
+------------------
+Features of Angular 11
+1.Updated Hot Module Replacement (HMR) Support -Hot Module Replacement is a mechanism that allows the modules to be replaced without a full browser refresh.
+ng serve --hmr
+2.Automatic Inlining of Fonts
+Angular 11 features automatic font inlining that converts your Google Fonts and Icon to inline in index.html. 
+"configurations": {  
+
+   "optimization": true /false 
+
+ }  
+Angular 11 : Breaking Changes & Deprecations
+TypeScript 4.0 Support
+The angular team in version 11 has dropped the support for TypeScript 3.9 and only supports TypeScript 4.0, only to speed up the builds.
+
+Roadmap
+The roadmap has been updated as one of the new features of Angular 11 on in-progress projects. 
+This approach reflects the larger efforts allowing the developers to provide early feedback that are to be incorporated into the final release.
+
+Pipes
+Angular recent version has fixed the typing for date and number pipe which earlier  used to take any type as input. 
+In the datetime, datepipe will round off the millisecond part to the nearest millisecond provided. 
+The async pipe will not return null anymore as a value for an undefined input. 
+This can cause compilation errors which is why it is still a breaking change, however, actually uncovers invalid usages.
+
+Browser Support/cleaning
+The support for IE 9, 10, and IE mobile in angular 11 is removed. 
+They were only deprecated in the version 10 release, but they are discontinued in this version. 
+Angular however still supports IE11 as the only version. Angular 11 also has removed obsolete API and several functions has been added to its deprecated list. 
+
+Angular Universal
+In angular 10, the team had got a component to utilize absoluteUrl when working with SSR. 
+The Angular 11 stable release needs to have the baseUrl parameter  for using useAbsoluteUrl baseUrl  that will override the protocol, hostname, and port.
+
+CollectionChangeRecord is deprecated
+Users will have to use IterableChangeRecord as in the early versions, as the CollectionChangeRecord has been deprecated now .
+
+Unit Test
+In the earlier versions the calling TestBed.overrideProvider after TestBed instatement had no impact, users will now get an exception if they attempt to do this. 
+
+ViewEncapsulation
+Angular 11 changelog involves the removal of the ViewEncapsulation.Native. 
+Instead, in this new release, you can use ViewEncapsulation.ShadowDom. The ng update will automatically update the existing pages.
+
+Generate E2E test with async/wait
+In the earlier versions async/await for async tasks was used while writing the e2e test cases. 
+In Angular 11, the CLI will no longer generate the protractor config to handle the async scenarios with SELENIUM_PROMISE_MANAGER like it was earlier used.
+
+Support Lazy Loading with Named Outlets
+The earlier versions named outlets that always supported the component. 
+There wasn't any way out to lazy load the module using the named outlet. You can use it now with Angular 11, with the following command. 
+
+Feature to Extract i18n tokens from library
+The new release of angular 11 allows you to extract the i18n tokens from angular libraries too by using the below command with the library.
+
+Angular Flex-Layout
+Angular 11 update also includes the addition of the flex-layout module of Angular. 
+
+The release supports the beta version (11.0.0-beta.33), and that it works pretty fine for production.
+
+Prompt for Strict Mode
+Angular 10 had a flag --strict for generating the angular application. In angular 11, 
+with all strict checks enabled, users will now get a prompt to check whether you can enable it as the below image. 
+The extra package.json which was created inside the app folder in 
+the earlier versions will no longer be created to avoid confusion among the community members. 
+https://www.angularminds.com/blog/article/top-features-of-angular-11.html
+
+------------------
+Features of Angular 7
+Angular Compatibility Compiler (NGCC) - 
+CLI Prompts - whether we have to use css/scss , routing 
+off course the bundle size and application performance
+virtual scrolling and Drag and drop angular materials package
+Native Script - single project mobile and web app too.
+
+
+-----------------
+Angular 8 
+Lazy Loading with Import() Sytax
+loadChildren: () => import(‘./races/races.module’).then(m => m.RacesModule)
+
+FormArray.clear
+form.markAllAsTouched();
+
+Angular IVY
+--------------------------
+Angular bootstrap process
+https://www.tektutorialshub.com/angular/angular-bootstrapping-application/
+
+
+----------
+
+
+ndgModel deprecated?? two way binding
+
+
+------
+What is the Angular activated route state?
+Angular RouterState is the state of the router as a tree of activated routes. 
+It tells how the various components of an application are arranged on the screen to define what should be displayed on it. 
+RouterState represents the state of the router as it keeps changing over time when users navigate from page to page.
+----
+What is difference between router and ActivatedRoute?
+Router does redirecting, don't call APIs about "getting the route information". If you needed to subscribe to changes in route, use this. router . 
+ActivatedRoute does all "get the query params, get current URL, etc"
+-----------
+TEST BED
+
+Configures and initializes environment for unit testing and provides methods for creating components and services in unit tests.
+
+describe('AppComponent' , () =>{
+
+    it('InitComp' , () => {
+        const fixture = TestBed.createComponent(AppComponent);
+	const instance = fixture.componentInstance;
+        expect(instance).toBeTruthy();
+
+    })
+
+})
+-----------
+
+What is lazy loading in Angular?
+Lazy Loading in Angular -
+As Angular generates a SPA (Single Page Application), all of its components are loaded at the same time. 
+This implies that a large number of unneeded libraries or modules may also be loaded. 
+Lazy loading in angular is the process of loading website components, modules, or other assets when they are needed.
+
+----------
+ngZone
+
+Zone helps Angular know when to trigger change detection and let the developers focus on the application development. 
+By default, Zone is loaded and works without further configuration. 
+You don't necessarily have to use Zone to make Angular work. Instead, you can opt to trigger change detection on your own.
+
+---------
+
+
+You can create an embedded view using createEmbeddedView method then attach that view to the DOM via ViewContainerRef:
+
+
+
+
+@Component({
+    selector: 'app-root',
+    template: `
+        <ng-template #template let-name='fromContext'><div>{{name}}</ng-template>
+        <ng-container #vc></ng-container>
+    `
+})
+export class AppComponent implements AfterViewChecked {
+    @ViewChild('template', { read: TemplateRef }) _template: TemplateRef<any>;
+    @ViewChild('vc', {read: ViewContainerRef}) vc: ViewContainerRef;
+    constructor() { }
+
+    ngAfterViewChecked() {
+        const view = this._template.createEmbeddedView({fromContext: 'John'});
+        this.vc.insert(view);
+
+		//or
+	this.vc.createEmbeddedView(this._template, {fromContext: 'John'});
+
+    }
+}
+
+-----------------
+Angular service worker
+
+At its simplest, a service worker is a script that runs in the web browser and manages caching for an application.
+Adding a service worker to an Angular application is one of the steps for turning an application into a Progressive Web App (also known as a PWA).
+Service workers function as a network proxy. They intercept all outgoing HTTP requests made by the application and can choose how to respond to them. 
+For example, they can query a local cache and deliver a cached response if one is available. Proxying
+---------------
+
+At its core, reactive programming revolves around the concept of reacting to data changes. 
+Instead of managing data updates manually, you set up streams of data, and your application reacts automatically when the data changes. 
+Observables are a central piece of Angular's reactive programming toolkit
+
+
+-----------------
+
+What Is Angular Ivy?
+Ivy is the code name for Angular’s next-generation compilation and rendering pipeline. Starting from the ninth version release of Angular, 
+the new compiler and runtime instructions are used by default instead of the older compiler and runtime, known as View Engine.
+
+
+------------
+What is incremental DOM? How is it different from virtual DOM?
+
+
+https://blog.nrwl.io/understanding-angular-ivy-incremental-dom-and-virtual-dom-243be844bf36
+
+----------
+
+ElementRef vs Renderer
+
+Renderer2 is a utility class that provides methods to manipulate and interact with the DOM (Document Object Model).
+It is used to perform operations such as creating, modifying, and removing elements, applying styles, and listening to events.
+
+    this.renderer.addClass(this.el.nativeElement, 'wild');
+
+ElementRef is a class that can hold a reference to a DOM element. 
+This is again an abstraction to not break in environments where the browsers DOM isn't actually available.
+
+
+Renderer2 enforces security measures to prevent security vulnerabilities like 
+Cross-Site Scripting (XSS) attacks. ElementRef does not provide any security measures, 
+
+https://blog.stackademic.com/renderer2-and-elementref-difference-bd31d7a0ada2
+---------------
+
+ngUpgrade:
+
+The ngUpgrade library allows you to run AngularJS and Angular in the same application. 
+This makes it easier to gradually migrate components over time instead of all at once.
